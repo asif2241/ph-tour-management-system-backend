@@ -15,8 +15,9 @@ const loadEnvVariables = () => {
     });
     return {
         PORT: process.env.PORT,
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         DB_URL: process.env.DB_URL,
-        NODE_DEVELOPMENT: process.env.NODE_ENV
+        NODE_ENV: process.env.NODE_ENV
     };
 };
 exports.envVars = loadEnvVariables();
