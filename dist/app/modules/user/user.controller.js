@@ -41,7 +41,7 @@ const getAllUsers = (0, catchAsync_1.catchAsync)((req, res, next) => __awaiter(v
         success: true,
         statusCode: http_status_codes_1.default.CREATED,
         message: "All Users Retrieved Successfully",
-        data: result.data,
+        data: result.data, //এখান থেকে typecript automatically <T> টা infer করে নিবে ---  doesn’t need you to explicitly write <T> — ts figures it out on its own.
         meta: result.meta
     });
 }));

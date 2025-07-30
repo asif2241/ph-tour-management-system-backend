@@ -19,6 +19,10 @@ const createUser = (payload) => __awaiter(void 0, void 0, void 0, function* () {
     });
     return user;
 });
+// const createUser = async (payload: Partial<IUser>) => {
+//     const user = await User.create(payload); // Pass the full payload
+//     return user;
+// }
 const getAllUsers = () => __awaiter(void 0, void 0, void 0, function* () {
     const users = yield user_model_1.User.find({});
     const totalUsers = yield user_model_1.User.countDocuments();
